@@ -202,8 +202,8 @@ class AlicloudUpdateRecord
             'SignatureNonce' => random_int(1000000000, 9999999999),
             'SignatureVersion' => '1.0',
             'Timestamp' => $this->getDate(),
-            'Type' => $this->type,
-            'Value' => $this->value,
+	        'Type' => $this->type,
+            'Value' => urlencode($this->value),
             'Version' => '2015-01-09'
         ];
 
